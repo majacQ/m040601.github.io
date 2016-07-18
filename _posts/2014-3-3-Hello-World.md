@@ -11,12 +11,15 @@ The easiest way to make your first post is to edit this one. Go into /_posts/ an
 
 Assuming you have your gallery images in a structure like
 
--img
-  -gallery
-    -image1.png
-    -image2.png
+    -img
+      -gallery
+        -image1.png
+        -image2.png
+        
     etc.
 you can access them in a collection or page like this:
+
+Start images:
 
 {% for image in site.static_files %}
 {% if image.path contains 'img/gallery' %}
@@ -24,6 +27,10 @@ you can access them in a collection or page like this:
     <img src="{{site.baseurl}}{{image.path}}">
 {% endif %}
 {% endfor %}
+
+Stop images:
+
+
 This goes through all static files and check for a certain path (img/gallery in this example).
 
 Than you can access the static file metadata for that file. (I named it 'image' in this example but you can name it whatever you want after the for keyword).
