@@ -20,16 +20,23 @@ Assuming you have your gallery images in a structure like
 you can access them in a collection or page like this:
 
 Start images:
-
+====
 {% for image in site.static_files %}
 {% if image.path contains 'img/gallery' %}
   <p>{{image.path}} - {{image.modified_time}}</p>
   <img src="{{site.baseurl}}{{image.path}}">
 {% endif %}
 {% endfor %}
-
 Stop images:
 
+Start epubs:
+{% for epub in site.static_files %}
+{% if epub.path contains 'epub/gallery' %}
+  <p>{{epub.path}} - {{epub.modified_time}}</p>
+  <a href="{{site.baseurl}}{{epub.path}}"></a>
+{% endif %}
+{% endfor %}
+Stop epubs
 
 This goes through all static files and check for a certain path (img/gallery in this example).
 
