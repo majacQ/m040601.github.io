@@ -3,6 +3,17 @@ layout: post
 title: You're up and running!
 ---
 
+Start epubs:
+====
+{% for epub in site.static_files %}
+{% if epub.path contains 'epub/gallery' %}
+  <a href="{{site.baseurl}}{{epub.path}}">{{epub.path}} last modified on {{epub.modified_time}}</a>
+{% endif %}
+{% endfor %}
+Stop epubs
+
+
+
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
@@ -30,15 +41,7 @@ Start images:
 {% endfor %}
 Stop images:
 
-Start epubs:
-====
-{% for epub in site.static_files %}
-{% if epub.path contains 'epub/gallery' %}
-  <p>{{epub.path}} - {{epub.modified_time}}</p>
-  <a href="{{site.baseurl}}{{epub.path}}">"{{site.baseurl}}{{epub.path}}"</a>
-{% endif %}
-{% endfor %}
-Stop epubs
+
 
 This goes through all static files and check for a certain path (img/gallery in this example).
 ====
