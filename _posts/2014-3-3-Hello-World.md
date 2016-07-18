@@ -23,8 +23,8 @@ Start images:
 
 {% for image in site.static_files %}
 {% if image.path contains 'img/gallery' %}
-    <p>{{image.path}} - {{image.modified_time}}</p>
-    <img src="{{site.baseurl}}{{image.path}}">
+  <p>{{image.path}} - {{image.modified_time}}</p>
+  <img src="{{site.baseurl}}{{image.path}}">
 {% endif %}
 {% endfor %}
 
