@@ -35,7 +35,7 @@ Start epubs:
 {% for epub in site.static_files %}
 {% if epub.path contains 'epub/gallery' %}
   <p>{{epub.path}} - {{epub.modified_time}}</p>
-  <a href="{{site.baseurl}}{{epub.path}}">
+  <a href="{{site.baseurl}}{{epub.path}}">"{{site.baseurl}}{{epub.path}}"</a>
 {% endif %}
 {% endfor %}
 Stop epubs
