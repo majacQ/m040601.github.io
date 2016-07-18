@@ -10,6 +10,7 @@ Next you can update your site name, avatar and other options using the _config.y
 The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
 
 Assuming you have your gallery images in a structure like
+====
 
     -img
       -gallery
@@ -30,15 +31,17 @@ Start images:
 Stop images:
 
 Start epubs:
+====
 {% for epub in site.static_files %}
 {% if epub.path contains 'epub/gallery' %}
   <p>{{epub.path}} - {{epub.modified_time}}</p>
-  <a href="{{site.baseurl}}{{epub.path}}"></a>
+  <a href="{{site.baseurl}}{{epub.path}}">
 {% endif %}
 {% endfor %}
 Stop epubs
 
 This goes through all static files and check for a certain path (img/gallery in this example).
+====
 
 Than you can access the static file metadata for that file. (I named it 'image' in this example but you can name it whatever you want after the for keyword).
 
