@@ -9,7 +9,7 @@ epubs:
 start epubs:
 
 {% for epub in site.static_files %}
-{% if epub.path contains 'epub/gallery' %}
+{% if epub.path contains 'epub/*' %}
   <a href="{{site.baseurl}}{{epub.path}}">{{epub.path}} last modified on {{epub.modified_time}}</a>
 {% endif %}
 {% endfor %}
