@@ -38,7 +38,11 @@ Assuming you have your gallery images in a structure like
         -image2.png
         
     etc.
+    
+    
 you can access them in a collection or page like this:
+
+
     {% for image in site.static_files %}
     {% if image.path contains 'img/gallery' %}
       <p>{{image.path}} - {{image.modified_time}}</p>
@@ -48,15 +52,15 @@ you can access them in a collection or page like this:
 
 
 Start images:
+
 {% for image in site.static_files %}
 {% if image.path contains 'img/gallery' %}
   <p>{{image.path}} - {{image.modified_time}}</p>
   <img src="{{site.baseurl}}{{image.path}}">
 {% endif %}
 {% endfor %}
+
 Stop images:
-
-
 
 This goes through all static files and check for a certain path (img/gallery in this example).
 
