@@ -27,6 +27,7 @@ epubs on other places:
 
 codey:
 ====
+
 ```
 {% for epubfile in site.static_files %}
 {% if epubfile.path contains 'mystaticfiles/epubs' %}
@@ -42,3 +43,4 @@ codey:
 {% endif %}
 {% endfor %}
 ```
+
