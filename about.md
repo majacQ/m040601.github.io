@@ -8,12 +8,14 @@ permalink: /about/
 epubs on mystaticfiles:
 ====
 
-code
+code:
+''''
     {% for epubfile in site.static_files %}
     {% if epubfile.path contains 'mystaticfiles/epubs' %}
       <a href="{{site.baseurl}}{{epubfile.path}}">{{epubfile.path}} last modified on {{epubfile.modified_time}}</a>
     {% endif %}
     {% endfor %}
+''''
 
 {% for epubfile in site.static_files %}
 {% if epubfile.path contains 'mystaticfiles/epubs' %}
