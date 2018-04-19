@@ -2,18 +2,6 @@
 layout: default
 ---
 
-epubs:
-====
-
-start epubs:
-
-{% for epub in site.static_files %}
-{% if epub.path contains 'epub' %}
-  <a href="{{site.baseurl}}{{epub.path}}">{{epub.path}} last modified on {{epub.modified_time}}</a>
-{% endif %}
-{% endfor %}
-
-Stop epubs
 
 <div class="posts">
   {% for post in site.posts %}
