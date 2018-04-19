@@ -18,7 +18,17 @@ epubs on mystaticfiles:
 txts on mystaticfiles:
 ====
 {% for txtfile in site.static_files %}
-{% if txtfile.path contains 'txt' %}
-  <a href="{{site.baseurl}}{{epub.path}}">{{txtfile.path}}</a> , last modified on {{txtfile.modified_time}}
+{% if txtfile.path contains 'mystaticfiles/txts' %}
+  <a href="{{site.baseurl}}{{txtfile.path}}">{{txtfile.path}}</a> , last modified on {{txtfile.modified_time}}
 {% endif %}
 {% endfor %}
+
+
+pdfs on mystaticfiles:
+====
+{% for pdffile in site.static_files %}
+{% if pdffile.path contains 'mystaticfiles/pdfs' %}
+  <a href="{{site.baseurl}}{{pdffile.path}}">{{pdffile.path}}</a> , last modified on {{pdffile.modified_time}}
+{% endif %}
+{% endfor %}
+
