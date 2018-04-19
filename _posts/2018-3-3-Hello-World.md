@@ -1,12 +1,14 @@
 ---
 layout: post
-title: You're up and runnning!
+title: Post with some epubs!
 ---
 
 epubs:
 ====
 
-start epubs:
+- start some epubs here:
+- another item before 2 breaks
+
 
 {% for epub in site.static_files %}
 {% if epub.path contains 'epub' %}
@@ -14,7 +16,9 @@ start epubs:
 {% endif %}
 {% endfor %}
 
-Stop epubs
+
+- an item after 2 breaks and Stop epubs
+- another item
 
 
 
