@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Post with some epubs!
+title: hoW this jeKYLL thing WorkZZZ!
 ---
 
 
@@ -28,7 +28,7 @@ Assuming you have your gallery images in a structure like
     etc.
     
     
-you can access them in a collection or page like this:
+you can access 'img/gallery' them in a collection or page like this:
 
 
     {% for image in site.static_files %}
