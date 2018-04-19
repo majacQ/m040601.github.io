@@ -10,16 +10,15 @@ epubs on mystaticfiles:
 ====
 {% for epubfile in site.static_files %}
 {% if epubfile.path contains 'mystaticfiles/epubs' %}
-  <a href="{{site.baseurl}}{{epubfile.path}}">{{epubfile.path}} last modified on {{epubfile.modified_time}}</a>
+  <a href="{{site.baseurl}}{{epubfile.path}}">{{epubfile.path}}</a> , last modified on {{epubfile.modified_time}}
 {% endif %}
 {% endfor %}
 
 
-
-epubs on other places:
+txts on mystaticfiles:
 ====
-{% for epub in site.static_files %}
-{% if epub.path contains 'epub' %}
-  <a href="{{site.baseurl}}{{epub.path}}">{{epub.path}} last modified on {{epub.modified_time}}</a>
+{% for txtfile in site.static_files %}
+{% if txtfile.path contains 'txt' %}
+  <a href="{{site.baseurl}}{{epub.path}}">{{txtfile.path}}</a> , last modified on {{txtfile.modified_time}}
 {% endif %}
 {% endfor %}
