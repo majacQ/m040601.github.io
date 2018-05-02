@@ -32,3 +32,14 @@ pdfs on mystaticfiles:
 {% endif %}
 {% endfor %}
 
+
+
+zims on mystaticfiles:
+====
+{% for zimfile in site.static_files %}
+{% if zimfile.path contains 'mystaticfiles/zims' %}
+  <a href="{{site.baseurl}}{{zimfile.path}}">{{zimfile.path}}</a> , last modified on {{zimfile.modified_time}}
+{% endif %}
+{% endfor %}
+
+
